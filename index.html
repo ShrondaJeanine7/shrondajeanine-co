@@ -1,3 +1,4 @@
+ HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1145,4 +1146,1153 @@
         console.log('💝 Ready to transform grief into growth!');
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shronda Jeanine & Company - Transform Grief into Growth</title>
+    <meta name="description" content="Healing services, spiritual guidance, books, and products to help you transform grief into growth. Professional grief counseling and holistic wellness solutions.">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Shronda Jeanine & Company - Transform Grief into Growth">
+    <meta property="og:description" content="Healing services, books, and spiritual guidance">
+    <meta property="og:image" content="https://shrondajeanineco.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button.primary {
+            background: #ff6b6b;
+            border-color: #ff6b6b;
+        }
+
+        .cta-button.primary:hover {
+            background: #ff5252;
+            border-color: #ff5252;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .book-now-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .book-now-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #f8fafc;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .buy-now-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .buy-now-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            min-width: 250px;
+        }
+
+        .newsletter-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #764ba2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #4caf50;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Shronda Jeanine & Company</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Grief into Growth</h1>
+            <p class="tagline">Professional healing services, spiritual guidance, and life-transforming products to help you navigate life's challenges with grace and strength.</p>
+            <div class="hero-cta">
+                <a href="#services" class="cta-button primary">Start Your Healing Journey</a>
+                <a href="#products" class="cta-button">Browse Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Healing Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">💝</div>
+                    <h3>Grief Counseling</h3>
+                    <p>Professional one-on-one sessions to help you process loss and find meaning in your journey. Compassionate support tailored to your unique experience.</p>
+                    <div class="service-price">$120/session</div>
+                    <a href="#contact" class="book-now-btn">Book Session</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🌿</div>
+                    <h3>Spiritual Guidance</h3>
+                    <p>Connect with your inner wisdom and divine purpose through personalized spiritual mentoring and energy healing practices.</p>
+                    <div class="service-price">$95/session</div>
+                    <a href="#contact" class="book-now-btn">Book Session</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">👥</div>
+                    <h3>Group Workshops</h3>
+                    <p>Join a supportive community in healing circles, workshops, and transformational group experiences.</p>
+                    <div class="service-price">$45/person</div>
+                    <a href="#contact" class="book-now-btn">Join Workshop</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">💻</div>
+                    <h3>Online Consultations</h3>
+                    <p>Remote healing sessions via video call, perfect for those who prefer the comfort of their own space.</p>
+                    <div class="service-price">$85/session</div>
+                    <a href="#contact" class="book-now-btn">Schedule Online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Transformational Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">📖</div>
+                    <div class="product-info">
+                        <h3>"Healing Through Loss" Book</h3>
+                        <p>A comprehensive guide to navigating grief with practical exercises, spiritual insights, and real-life stories of transformation.</p>
+                        <div class="product-price">$24.99</div>
+                        <button class="buy-now-btn" onclick="purchaseProduct('book')">Buy Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">🎧</div>
+                    <div class="product-info">
+                        <h3>Meditation Audio Series</h3>
+                        <p>Guided meditations for grief healing, anxiety relief, and spiritual connection. 12 audio tracks included.</p>
+                        <div class="product-price">$39.99</div>
+                        <button class="buy-now-btn" onclick="purchaseProduct('audio')">Buy Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">📝</div>
+                    <div class="product-info">
+                        <h3>Healing Journal Kit</h3>
+                        <p>Beautiful guided journal with prompts, affirmations, and space for reflection on your healing journey.</p>
+                        <div class="product-price">$18.99</div>
+                        <button class="buy-now-btn" onclick="purchaseProduct('journal')">Buy Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">💎</div>
+                    <div class="product-info">
+                        <h3>Crystal Healing Set</h3>
+                        <p>Carefully selected crystals for emotional healing, including amethyst, rose quartz, and black tourmaline.</p>
+                        <div class="product-price">$45.99</div>
+                        <button class="buy-now-btn" onclick="purchaseProduct('crystals')">Buy Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">🌸</div>
+                    <div class="product-info">
+                        <h3>Self-Care Ritual Box</h3>
+                        <p>Monthly subscription box with healing teas, aromatherapy items, and self-care tools for ongoing support.</p>
+                        <div class="product-price">$29.99/month</div>
+                        <button class="buy-now-btn" onclick="purchaseProduct('subscription')">Subscribe</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">🎯</div>
+                    <div class="product-info">
+                        <h3>Online Course Bundle</h3>
+                        <p>Complete digital course: "From Pain to Purpose" - 8 weeks of video lessons, workbooks, and community access.</p>
+                        <div class="product-price">$197</div>
+                        <button class="buy-now-btn" onclick="purchaseProduct('course')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            <p>Receive weekly inspiration, healing tips, and exclusive offers directly to your inbox.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">Join Community</button>
+            </form>
+            <div class="loading" id="newsletterLoading"></div>
+            <div class="success-message" id="newsletterSuccess">Thank you! Welcome to our healing community.</div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Transformations</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Shronda's guidance helped me find peace after losing my husband. Her compassionate approach and spiritual wisdom gave me hope when I felt lost."</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The healing journal and meditation series transformed my daily practice. I finally feel like I'm moving forward instead of staying stuck in grief."</p>
+                    <p class="testimonial-author">- Michael R.</p>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Working with Shronda was life-changing. She helped me see that my pain could become my purpose. Forever grateful for her support."</p>
+                    <p class="testimonial-author">- Jennifer L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="padding: 5rem 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Begin Your Healing Journey</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service" style="width: 100%; padding: 0.75rem; border: 2px solid #e1e5e9; border-radius: 8px; font-size: 1rem;">
+                        <option value="">Select a service...</option>
+                        <option value="grief-counseling">Grief Counseling</option>
+                        <option value="spiritual-guidance">Spiritual Guidance</option>
+                        <option value="group-workshop">Group Workshop</option>
+                        <option value="online-consultation">Online Consultation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell me about your situation</label>
+                    <textarea id="message" name="message" placeholder="Share what you're going through and how I can best support you..." required></textarea>
+                </div>
+                
+                <button type="submit" class="book-now-btn" style="width: 100%; padding: 1rem;">Send Message & Schedule Consultation</button>
+            </form>
+            <div class="loading" id="contactLoading"></div>
+            <div class="success-message" id="contactSuccess">Thank you! I'll contact you within 24 hours to schedule your consultation.</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shronda Jeanine & Company</h3>
+                    <p>Transforming grief into growth through compassionate healing services and spiritual guidance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="#services">Grief Counseling</a>
+                    <a href="#services">Spiritual Guidance</a>
+                    <a href="#services">Group Workshops</a>
+                    <a href="#services">Online Consultations</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="#products">Healing Books</a>
+                    <a href="#products">Meditation Audio</a>
+                    <a href="#products">Journal Kits</a>
+                    <a href="#products">Crystal Sets</a>
+                    <a href="#products">Online Courses</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📧 shrondajeanineco@shrondajeanineco.com</p>
+                    <p>📱 Available for consultations</p>
+                    <p>🌐 shrondajeanineco.com</p>
+                    <p>⏰ Mon-Fri: 9AM-6PM EST</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shronda Jeanine & Company. All rights reserved. | Transforming Lives Through Healing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Product purchase functionality
+        function purchaseProduct(productType) {
+            const products = {
+                'book': {
+                    name: 'Healing Through Loss Book',
+                    price: 24.99,
+                    id: 'book_001'
+                },
+                'audio': {
+                    name: 'Meditation Audio Series',
+                    price: 39.99,
+                    id: 'audio_001'
+                },
+                'journal': {
+                    name: 'Healing Journal Kit',
+                    price: 18.99,
+                    id: 'journal_001'
+                },
+                'crystals': {
+                    name: 'Crystal Healing Set',
+                    price: 45.99,
+                    id: 'crystal_001'
+                },
+                'subscription': {
+                    name: 'Self-Care Ritual Box',
+                    price: 29.99,
+                    id: 'subscription_001'
+                },
+                'course': {
+                    name: 'From Pain to Purpose Course',
+                    price: 197.00,
+                    id: 'course_001'
+                }
+            };
+
+            const product = products[productType];
+            
+            // For now, show an alert (you'll replace this with actual payment processing)
+            alert(`Redirecting to secure checkout for ${product.name} - ${product.price}`);
+            
+            // Track the purchase intent
+            console.log('Purchase Intent:', {
+                product: product.name,
+                price: product.price,
+                timestamp: new Date(),
+                productId: product.id
+            });
+
+            // Here you would integrate with payment processors:
+            // PayPal, Stripe, Square, etc.
+            // Example PayPal integration would go here
+        }
+
+        // Newsletter signup
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const loading = document.getElementById('newsletterLoading');
+            const success = document.getElementById('newsletterSuccess');
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Show loading
+            loading.style.display = 'block';
+            
+            // Simulate API call
+            setTimeout(() => {
+                loading.style.display = 'none';
+                success.style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Track newsletter signup
+                console.log('Newsletter Signup:', {
+                    email: email,
+                    timestamp: new Date(),
+                    source: 'website'
+                });
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    success.style.display = 'none';
+                }, 5000);
+                
+            }, 2000);
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const loading = document.getElementById('contactLoading');
+            const success = document.getElementById('contactSuccess');
+            const formData = new FormData(this);
+            
+            // Show loading
+            loading.style.display = 'block';
+            
+            // Simulate API call
+            setTimeout(() => {
+                loading.style.display = 'none';
+                success.style.display = 'block';
+                
+                // Track contact form submission
+                console.log('Contact Form Submission:', {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    service: formData.get('service'),
+                    timestamp: new Date()
+                });
+                
+                // Reset form
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    success.style.display = 'none';
+                }, 8000);
+                
+            }, 2000);
+        });
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in-up');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize fade-in elements
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'all 0.6s ease-out';
+        });
+
+        // Listen for scroll events
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Run animation check on load
+        animateOnScroll();
+
+        // Add navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Mobile menu toggle (if you want to add a mobile hamburger menu)
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('mobile-active');
+        }
+
+        // Add click tracking for analytics
+        document.addEventListener('click', function(e) {
+            // Track CTA clicks
+            if (e.target.classList.contains('cta-button')) {
+                console.log('CTA Click:', {
+                    button: e.target.textContent,
+                    timestamp: new Date(),
+                    href: e.target.href
+                });
+            }
+            
+            // Track service bookings
+            if (e.target.classList.contains('book-now-btn')) {
+                console.log('Service Booking Click:', {
+                    service: e.target.closest('.service-card')?.querySelector('h3')?.textContent,
+                    timestamp: new Date()
+                });
+            }
+        });
+
+        // Auto-scroll testimonials (optional enhancement)
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        
+        function highlightTestimonial() {
+            testimonials.forEach((card, index) => {
+                if (index === currentTestimonial) {
+                    card.style.transform = 'scale(1.05)';
+                    card.style.boxShadow = '0 15px 40px rgba(102, 126, 234, 0.2)';
+                } else {
+                    card.style.transform = 'scale(1)';
+                    card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        }
+
+        // Highlight testimonials every 3 seconds
+        setInterval(highlightTestimonial, 3000);
+
+        // Performance optimization - lazy loading
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+
+        // Add to calendar functionality for bookings
+        function addToCalendar(service, date, time) {
+            const startDate = new Date(`${date} ${time}`);
+            const endDate = new Date(startDate.getTime() + (60 * 60 * 1000)); // 1 hour session
+            
+            const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(service + ' Session')}&dates=${startDate.toISOString().replace(/[-:]/g, '').split('.')[0]}Z/${endDate.toISOString().replace(/[-:]/g, '').split('.')[0]}Z&details=${encodeURIComponent('Healing session with Shronda Jeanine & Company')}&location=Online/In-Person`;
+            
+            window.open(calendarUrl, '_blank');
+        }
+
+        // SEO and Analytics tracking
+        function trackPageView() {
+            console.log('Page View:', {
+                url: window.location.href,
+                timestamp: new Date(),
+                referrer: document.referrer,
+                userAgent: navigator.userAgent
+            });
+        }
+
+        // Track page view on load
+        trackPageView();
+
+        // Track scroll depth for analytics
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                
+                // Track milestone scroll depths
+                if (scrollPercent >= 25 && scrollPercent < 50) {
+                    console.log('Scroll Milestone: 25%');
+                } else if (scrollPercent >= 50 && scrollPercent < 75) {
+                    console.log('Scroll Milestone: 50%');
+                } else if (scrollPercent >= 75 && scrollPercent < 90) {
+                    console.log('Scroll Milestone: 75%');
+                } else if (scrollPercent >= 90) {
+                    console.log('Scroll Milestone: 90%');
+                }
+            }
+        });
+
+        // Loading screen (optional)
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        console.log('🌟 Shronda Jeanine & Company website loaded successfully!');
+        console.log('💝 Ready to transform grief into growth!');
+    </script>
+</body>
+>>>>>>> 4ae6d3b448afd8c6e593b6a251326bcebda0b48f
 </html>
