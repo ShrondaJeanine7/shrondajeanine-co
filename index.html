@@ -1,12 +1,554 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shronda Jeanine & Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header with Logo */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-silhouette {
+            width: 160px;
+            height: 160px;
+            background: #1a202c;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            color: #d69e2e;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .logo-main {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+
+        .logo-sub {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .site-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .site-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            font-weight: 300;
+        }
+
+        /* Main Content Areas */
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Featured Articles Section */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid;
+            border-image: linear-gradient(135deg, #319795 0%, #e53e3e 100%) 1;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #319795 0%, #e53e3e 100%);
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(49, 151, 149, 0.2);
+        }
+
+        .featured-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .featured-card p {
+            color: #718096;
+            margin-bottom: 15px;
+        }
+
+        .featured-card a {
+            color: #319795;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .featured-card a:hover {
+            color: #e53e3e;
+        }
+
+        /* Events Section */
+        .events-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-item {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid;
+            border-image: linear-gradient(135deg, #319795 0%, #e53e3e 100%) 1;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #319795 0%, #e53e3e 100%);
+        }
+
+        .event-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 25px rgba(49, 151, 149, 0.15);
+        }
+
+        .event-date {
+            font-weight: 600;
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .event-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #2d3748;
+        }
+
+        .event-description {
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .event-location {
+            color: #a0aec0;
+            font-size: 0.9em;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(49, 151, 149, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-card p {
+            color: #718096;
+        }
+
+        .contact-card a {
+            color: #319795;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #e53e3e;
+        }
+
+        /* Support Section */
+        .support-highlight {
+            background: linear-gradient(135deg, #319795 0%, #e53e3e 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+
+        .support-highlight h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .support-highlight p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .support-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .support-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .site-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 25px;
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .logo-silhouette {
+                width: 120px;
+                height: 120px;
+            }
+
+            .logo-main {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-silhouette">
+                    <div class="logo-text">
+                        <div class="logo-main">Shronda<br>Jeanine</div>
+                        <div class="logo-sub">and<br>company</div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="site-title">Shronda Jeanine & Company</h1>
+            <p class="site-subtitle">Healing • Growth • Community</p>
+        </header>
+
+        <!-- Featured Articles Section -->
+        <section class="content-section">
+            <h2 class="section-title">✨ Featured</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <h3>"Reclaiming My Power"</h3>
+                    <p>A reflection on strength after loss and rediscovery.</p>
+                    <a href="#">Read more →</a>
+                </div>
+                <div class="featured-card">
+                    <h3>"Seeds of Light" eBook</h3>
+                    <p>30 days of inspiration to pour into your spirit.</p>
+                    <a href="#">Download →</a>
+                </div>
+                <div class="featured-card">
+                    <h3>🪴 Plant Love</h3>
+                    <p>Browse our living collection: Pothos, Snake Plant, Monstera, and more.</p>
+                    <a href="#">View Plants →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="content-section">
+            <h2 class="section-title">📅 Upcoming Events</h2>
+            <ul class="events-list">
+                <li class="event-item">
+                    <div class="event-date">📅 February 15, 2025 • 7:00 PM</div>
+                    <div class="event-title">Healing Circle: Finding Your Light</div>
+                    <div class="event-description">Join us for an evening of connection, sharing, and gentle healing practices to nurture your spirit. We'll explore meditation, journaling, and supportive community dialogue.</div>
+                    <div class="event-location">📍 Community Center, Phoenix AZ</div>
+                </li>
+                <li class="event-item">
+                    <div class="event-date">📅 March 2, 2025 • 2:00 PM</div>
+                    <div class="event-title">Plant Care Workshop</div>
+                    <div class="event-description">Learn the essentials of caring for your green friends. Perfect for beginners and plant lovers alike. We'll cover watering, lighting, repotting, and troubleshooting common issues.</div>
+                    <div class="event-location">📍 Virtual Event (Zoom)</div>
+                </li>
+                <li class="event-item">
+                    <div class="event-date">📅 March 20, 2025 • 6:30 PM</div>
+                    <div class="event-title">"Seeds of Light" Book Discussion</div>
+                    <div class="event-description">Dive deep into themes of growth, resilience, and finding joy in everyday moments. Bring your favorite passage and be ready for meaningful conversation.</div>
+                    <div class="event-location">📍 Local Library, Phoenix AZ</div>
+                </li>
+                <li class="event-item">
+                    <div class="event-date">📅 April 5, 2025 • 10:00 AM</div>
+                    <div class="event-title">Spring Renewal Retreat</div>
+                    <div class="event-description">A half-day retreat focused on renewal, intention-setting, and celebrating new beginnings. Includes guided meditation, creative exercises, and nourishing refreshments.</div>
+                    <div class="event-location">📍 Desert Botanical Garden, Phoenix AZ</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section">
+            <h2 class="section-title">💌 Connect With Us</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@shrondajeanineco.com">hello@shrondajeanineco.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Social Media</h3>
+                    <p>Follow our journey</p>
+                    <p><a href="#">@shrondajeanineco</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Phoenix, Arizona</p>
+                    <p>Serving the greater Phoenix area</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Let's Talk</h3>
+                    <p>Book a consultation</p>
+                    <p><a href="mailto:hello@shrondajeanineco.com?subject=Consultation Request">Schedule a chat →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-highlight">
+            <h3>🧡 Support the Cause</h3>
+            <p>If you've ever been touched by grief, healing, or growth—your donation helps us serve more people in our community.</p>
+            <a href="#" class="support-link">CashApp: $yesitisshronda</a>
+        </section>
+    </div>
+</body>
+</html>
+
+
+ChatGPT said:
+Shronda Site Optimized
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shronda Jeanine & Company</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shronda Jeanine & Company: Healing, Growth, Community. Events, articles, and resources for personal transformation and connection.">
+    <meta name="keywords" content="healing, growth, grief, community, plants, support, Phoenix, Shronda Jeanine">
+    <meta name="author" content="Shronda Jeanine & Company">
+    <title>Shronda Jeanine & Company</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Existing styles retained */
+        /* ... (previous CSS remains unchanged) ... */
+
+        /* SEO & Accessibility Enhancements */
+        img[alt] {
+            text-indent: -9999px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Shronda Jeanine & Company!</h1>
-  <p>This is your website live on GitHub Pages.</p>
-</body>
-</html>
+    <div class="container">
+        <!-- Header with Logo -->
+        <header class="header">
+            <div class="logo">
+                <img src="/mnt/data/A_logo_for_\"Shronda_Jeanine_and_Company\"_features_.png" alt="Shronda Jeanine and Company Logo">
+            </div>
+            <h1 class="site-title">Shronda Jeanine & Company</h1>
