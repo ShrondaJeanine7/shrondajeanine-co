@@ -1,1 +1,2 @@
 # shrondajeanine-co
+Shronda Jeanine & Company is a purpose-driven collective dedicated to healing, empowerment, and generational impact. We blend creativity, culture, and community care to provide tools, resources, and initiatives that help individuals break cycles, embrace authenticity, and live abundantly — in wealth, self-worth, and love. Every project we create is rooted in the belief that abundance is for everyone, and with the right support, anyone can build a legacy worth passing down.
