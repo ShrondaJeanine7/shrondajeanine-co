@@ -1,72 +1,57 @@
-/* Reset default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body background & default text */
+/* ====== Global Styles ====== */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #004d4d, #006666, #008080);
-  background-attachment: fixed;
-  background-size: cover;
-  color: #004d4d;
-  line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0e4b4a, #1aa186); /* logo gradient */
+    color: #003d3b; /* dark teal text */
 }
 
-/* Headings */
-h1, h2, h3, h4 {
-  color: #004d4d;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+/* ====== Headers ====== */
+h1, h2, h3, h4, h5, h6 {
+    color: #003d3b; /* dark teal */
+    text-shadow: 1px 1px 2px rgba(0, 61, 59, 0.3);
 }
 
-/* Links */
-a {
-  color: #004d4d;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+/* ====== Paragraphs & Text ====== */
+p, li {
+    color: #003d3b;
+    line-height: 1.6;
 }
 
-a:hover {
-  color: #00cccc;
-  text-shadow: 0 0 5px rgba(0, 204, 204, 0.6);
+/* ====== Navigation ====== */
+nav {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 0;
+    text-align: center;
 }
 
-/* Logo placement */
-header {
-  text-align: center;
-  padding: 20px;
+nav a {
+    color: #003d3b;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
 }
 
-header img {
-  max-width: 200px;
-  height: auto;
+nav a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
 }
 
-/* Content container */
+/* ====== Content Containers ====== */
 .container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Buttons */
-button, .btn {
-  background-color: #004d4d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* ====== Footer ====== */
+footer {
+    background: rgba(255, 255, 255, 0.15);
+    color: #003d3b;
+    padding: 15px;
+    text-align: center;
 }
-
-button:hover, .btn:hover {
-  background-color: #00cccc;
-  transform: scale(
