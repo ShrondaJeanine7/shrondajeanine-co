@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shronda Jeanine & Company - Healing, growth, plants, and nourishing cottage foods made with love in Arizona">
+    <title>Abundant Harvest | Shronda Jeanine & Company</title>
+    
+    <!-- Fonts that match your existing site -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"></noscript>
+    
+    <style>
+        :root {
+            /* Colors that complement your site's healing theme */
+            --primary-color: #2c5530; /* Deep forest green */
+            --secondary-color: #d4704a; /* Warm earth tone */
+            --accent-color: #f4a261; /* Golden accent */
+            --healing-color: #6a994e; /* Growth green */
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-primary: #fdfcfa; /* Warm white */
+            --bg-secondary: #f7f5f3; /* Soft cream */
+            --card-bg: rgba(255, 253, 250, 0.95);
+            --shadow-soft: 0 4px 20px rgba(45, 55, 72, 0.08);
+            --shadow-lifted: 0 10px 40px rgba(45, 55, 72, 0.12);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            min-height: 100vh;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, rgba(106, 153, 78, 0.1), rgba(244, 162, 97, 0.05));
+            border-bottom: 1px solid rgba(106, 153, 78, 0.1);
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--healing-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 20px;
+            font-weight: 300;
+        }
+
+        .healing-note {
+            background: linear-gradient(135deg, rgba(212, 112, 74, 0.1), rgba(244, 162, 97, 0.1));
+            padding: 20px 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '🌿';
+            position: absolute;
+            right: -50px;
+            top: 0;
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(106, 153, 78, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--healing-color), var(--accent-color));
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .card-list li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            font-size: 0.9rem;
+        }
+
+        .card-list li:hover {
+            color: var(--healing-color);
+            transform: translateX(4px);
+        }
+
+        .specialty-section {
+            background: linear-gradient(135deg, rgba(106, 153, 78, 0.05), rgba(244, 162, 97, 0.03));
+            padding: 60px 20px;
+            border-radius: 24px;
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        .specialty-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .specialty-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .specialty-intro {
+            background: rgba(212, 112, 74, 0.1);
+            padding: 25px;
+            border-radius: 16px;
+            border: 2px dashed var(--secondary-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .specialty-intro p {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .specialty-card {
+            background: var(--bg-primary);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            border-left: 4px solid var(--healing-color);
+            transition: var(--transition);
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .specialty-card .card-title {
+            color: var(--healing-color);
+        }
+
+        .info-section {
+            background: linear-gradient(135deg, var(--healing-color), var(--primary-color));
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .info-section h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .info-section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--healing-color), var(--accent-color));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lifted);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 40px 20px 30px;
+            }
+            
+            .container {
+                padding: 40px 16px;
+            }
+            
+            .products-grid, .specialty-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .specialty-section {
+                padding: 40px 16px;
+            }
+            
+            .info-section {
+                padding: 30px 20px;
+            }
+            
+            .section-title::after {
+                display: none;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles */
+        .product-card:focus-within,
+        .specialty-card:focus-within {
+            outline: 2px solid var(--healing-color);
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <header class="page-header">
+        <nav class="breadcrumb">
+            <a href="/">Home</a> / <a href="/">Shronda Jeanine & Company</a> / Abundant Harvest
+        </nav>
+        
+        <h1 class="page-title">🍃 Abundant Harvest</h1>
+        <p class="page-subtitle">Nourishing Your Body as We Nurture Your Spirit</p>
+        
+        <div class="healing-note">
+            "Food is medicine, love is healing, and every meal is an opportunity to pour care into ourselves and others."
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="section-intro">
+            <h2 class="section-title">Arizona Cottage Foods</h2>
+            <p class="section-description">
+                Fresh. Local. Made with Love. We proudly offer foods approved under Arizona's Cottage Food Program — all handcrafted in small batches, using the freshest ingredients available. Each item is created with the same intention we bring to healing: mindful, nurturing, and full of love.
+            </p>
+        </section>
+
+        <!-- Current Products -->
+        <div class="products-grid">
+            <article class="product-card">
+                <span class="card-icon">🍞</span>
+                <h3 class="card-title">Baked Goods</h3>
+                <ul class="card-list">
+                    <li>Breads (sweet & savory)</li>
+                    <li>Cookies</li>
+                    <li>Cakes</li>
+                    <li>Pies</li>
+                </ul>
+            </article>
+            
+            <article class="product-card">
+                <span class="card-icon">🍯</span>
+                <h3 class="card-title">Jams, Jellies, & Preserves</h3>
+                <ul class="card-list">
+                    <li>Seasonal fruit jams</li>
+                    <li>Small-batch preserves</li>
+                </ul>
+            </article>
+            
+            <article class="product-card">
+                <span class="card-icon">🌾</span>
+                <h3 class="card-title">Dry Goods</h3>
+                <ul class="card-list">
+                    <li>Granola blends</li>
+                    <li>Spice mixes & seasoning blends</li>
+                    <li>Baking mixes</li>
+                </ul>
+            </article>
+            
+            <article class="product-card">
+                <span class="card-icon">🍫</span>
+                <h3 class="card-title">Candy & Chocolates</h3>
+                <ul class="card-list">
+                    <li>Hand-poured chocolates</li>
+                    <li>Old-fashioned candies</li>
+                </ul>
+            </article>
+            
+            <article class="product-card">
+                <span class="card-icon">🥒</span>
+                <h3 class="card-title">Pickled & Acidified Foods</h3>
+                <ul class="card-list">
+                    <li>Homemade salsa</li>
+                    <li>Pickled vegetables</li>
+                </ul>
+            </article>
+            
+            <article class="product-card">
+                <span class="card-icon">❄️</span>
+                <h3 class="card-title">Freeze-Dried Foods</h3>
+                <ul class="card-list">
+                    <li>Freeze-dried fruits & veggies</li>
+                    <li>Freeze-dried treats</li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Specialty Section -->
+        <section class="specialty-section">
+            <div class="specialty-header">
+                <h2 class="specialty-title">🌾 Specialty Made-to-Order Items</h2>
+                <div class="specialty-intro">
+                    <p>Perfect for gifts, events, and special moments of nourishment. Specialty items are made to order and require full payment in advance.</p>
+                </div>
+            </div>
+
+            <div class="specialty-grid">
+                <article class="specialty-card">
+                    <h3 class="card-title">Breakfast & Brunch</h3>
+                    <ul class="card-list">
+                        <li>Sweet Sunrise Breakfast Box – banana nut bread, granola, seasonal jam</li>
+                        <li>Morning Harvest Loaf & Jam Set – artisan bread & choice of preserves</li>
+                    </ul>
+                </article>
+                
+                <article class="specialty-card">
+                    <h3 class="card-title">Picnic & Travel Packs</h3>
+                    <ul class="card-list">
+                        <li>Desert Bloom Picnic Pack – sourdough, pickled veggies, chocolate bark</li>
+                        <li>Grand Canyon Trail Mix Bundle – freeze-dried fruits, spiced nuts, granola clusters</li>
+                    </ul>
+                </article>
+                
+                <article class="specialty-card">
+                    <h3 class="card-title">Savory & Spice</h3>
+                    <ul class="card-list">
+                        <li>Sonoran Salsa & Bread Set – roasted tomato salsa, herbed flatbread, seasoning blend</li>
+                        <li>Southwest Spice Kit – taco seasoning, cinnamon sugar, BBQ rub, cornbread mix</li>
+                    </ul>
+                </article>
+                
+                <article class="specialty-card">
+                    <h3 class="card-title">Desserts & Treats</h3>
+                    <ul class="card-list">
+                        <li>Harvest Comfort Dessert Trio – hand pies, chocolate-dipped freeze-dried strawberries, cinnamon-pear preserves</li>
+                        <li>Chill & Indulge Dessert Cups (Refrigerated) – mini cheesecakes, chocolate mousse, lemon cream parfait</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Order Information -->
+        <section class="info-section">
+            <h2>Order & Pickup Information</h2>
+            <p>Specialty orders must be placed and paid for in advance.</p>
+            <p>Pickup location will be arranged at the time of order.</p>
+            <p>Availability may vary based on seasonal ingredients.</p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <a href="#contact" class="cta-button">Start Your Order Journey</a>
+        </section>
+    </main>
+</body>
+</html>
