@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Shronda Jeanine - Professional healer, coach, and cottage food artisan in Arizona. Learn about our mission to support healing, growth, and nourishing community connections.">
+    <meta name="keywords" content="Shronda Jeanine biography, healing professional Arizona, personal development coach, cottage food entrepreneur, grief counselor">
+    <title>About Us - Our Story & Mission | Shronda Jeanine & Company</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5530;
+            --secondary-color: #d4704a;
+            --accent-color: #f4a261;
+            --healing-color: #6a994e;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-primary: #fdfcfa;
+            --bg-secondary: #f7f5f3;
+            --card-bg: rgba(255, 253, 250, 0.95);
+            --shadow-soft: 0 4px 20px rgba(45, 55, 72, 0.08);
+            --shadow-lifted: 0 10px 40px rgba(45, 55, 72, 0.12);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 253, 250, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(106, 153, 78, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--healing-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(106, 153, 78, 0.1), rgba(244, 162, 97, 0.05));
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Story Section */
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .story-image {
+            background: linear-gradient(135deg, var(--healing-color), var(--accent-color));
+            border-radius: var(--border-radius);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .story-content h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        /* Values Section */
+        .values-section {
+            margin-bottom: 100px;
+        }
+
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .value-card h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Mission Statement */
+        .mission-section {
+            background: linear-gradient(135deg, var(--healing-color), var(--primary-color));
+            color: white;
+            padding: 80px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 100px;
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .mission-section h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+
+        .mission-section p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Support Section */
+        .support-section {
+            background: var(--card-bg);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .support-section h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .support-section p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .support-option {
+            padding: 30px 20px;
+            border: 2px dashed var(--healing-color);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .support-option:hover {
+            background: rgba(106, 153, 78, 0.05);
+        }
+
+        .support-option h4 {
+            color: var(--healing-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* Ad Banner */
+        .ad-banner {
+            background: rgba(106, 153, 78, 0.05);
+            border: 2px dashed rgba(106, 153, 78, 0.2);
+            padding: 20px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .story-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .story-image {
+                height: 250px;
+                order: -1;
+            }
+
+            .container {
+                padding: 60px 20px;
+            }
+
+            .mission-section {
+                padding: 60px 30px;
+            }
+
+            .support-section {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Shronda Jeanine & Co</a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/abundant-harvest.html">Abundant Harvest</a></li>
+                <li><a href="/about.html" class="active">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Story</h1>
+        <p class="subtitle">A journey of healing, growth, and creating spaces where others can find their own path to wholeness and abundant living.</p>
+    </section>
+
+    <!-- AdSense Banner -->
+    <div class="ad-banner">
+        [AdSense Banner Ad - 728x90 or Responsive]
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Story Section -->
+        <section class="story-section">
+            <div class="story-image">
+                💚
+            </div>
+            <div class="story-content">
+                <h2>Meet Shronda Jeanine</h2>
+                <p>
+                    My journey into healing work began through my own experiences with grief and loss. After navigating profound personal challenges, I discovered that our deepest wounds can become our greatest sources of strength and compassion for others.
+                </p>
+                <p>
+                    What started as my own healing journey evolved into a calling to support others through their darkest moments and guide them toward reclaiming their power. I believe that healing isn't just about moving past trauma—it's about transforming it into wisdom, strength, and authentic living.
+                </p>
+                <p>
+                    Today, I combine professional training in grief counseling and life coaching with intuitive guidance, creating a holistic approach that honors both the practical and spiritual aspects of healing. Whether through one-on-one sessions, nourishing cottage foods, or the simple act of caring for plants, everything I do is rooted in the belief that healing happens in community and through genuine care.
+                </p>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <article class="value-card">
+                    <span class="value-icon">🤲</span>
+                    <h3>Authentic Compassion</h3>
+                    <p>We meet you exactly where you are, without judgment, offering genuine support that honors your unique journey and experiences.</p>
+                </article>
+
+                <article class="value-card">
+                    <span class="value-icon">🌱</span>
+                    <h3>Holistic Healing</h3>
+                    <p>True healing encompasses mind, body, and spirit. We address all aspects of your wellbeing through integrated approaches and nurturing practices.</p>
+                </article>
+
+                <article class="value-card">
+                    <span class="value-icon">💪</span>
+                    <h3>Empowerment</h3>
+                    <p>Our goal is to help you reclaim your power, discover your inner strength, and develop the tools to create lasting positive change in your life.</p>
+                </article>
+
+                <article class="value-card">
+                    <span class="value-icon">🏡</span>
+                    <h3>Community & Connection</h3>
+                    <p>Healing happens in relationship. We foster supportive communities where people can share, grow, and heal together in safe, nurturing environments.</p>
+                </article>
+
+                <article class="value-card">
+                    <span class="value-icon">🌿</span>
+                    <h3>Natural Nourishment</h3>
+                    <p>We believe in nourishing the whole person—through healthy foods, plant connections, and practices that honor our natural need for beauty and growth.</p>
+                </article>
+
+                <article class="value-card">
+                    <span class="value-icon">✨</span>
+                    <h3>Intentional Living</h3>
+                    <p>Every service, every interaction, every creation is infused with intention, love, and the belief that small acts of care can create profound transformation.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- AdSense Rectangle Ad -->
+        <div class="ad-banner">
+            [AdSense Rectangle Ad - 300x250]
+        </div>
+
+        <!-- Mission Statement -->
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <p>
+                To create healing spaces where individuals touched by grief, trauma, and life transitions can find professional support, authentic community, and nourishing experiences that help them reclaim their power and live with intention, joy, and abundance.
+            </p>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section" id="support">
+            <h2>🧡 Support Our Cause</h2>
+            <p>
+                If you've ever been touched by grief, healing, or growth, your support helps us continue serving our community. Every contribution allows us to offer sliding scale services, community workshops, and resources for those who need them most.
+            </p>
+            
+            <div class="support-options">
+                <div class="support-option">
+                    <h4>💝 One-Time Donation</h4>
+                    <p>Support our mission with a one-time contribution</p>
+                    <strong>CashApp: $yesitisshronda</strong>
+                </div>
+                
+                <div class="support-option">
+                    <h4>📅 Monthly Support</h4>
+                    <p>Become a monthly supporter of our community work</p>
+                    <strong>$25, $50, or $100/month</strong>
+                </div>
+                
+                <div class="support-option">
+                    <h4>🤝 Sponsor a Session</h4>
+                    <p>Sponsor healing sessions for those who cannot afford them</p>
+                    <strong>$75-$150 per session</strong>
+                </div>
+                
+                <div class="support-option">
+                    <h4>🌱 Community Garden</h4>
+                    <p>Help us create healing spaces and plant therapy programs</p>
+                    <strong>Any amount helps</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Background -->
+        <section style="margin-top: 80px;">
+            <h2 class="section-title">Professional Background</h2>
+            <div style="background: var(--card-bg); padding: 50px; border-radius: var(--border-radius); box-shadow: var(--shadow-soft);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 15px; font-family: 'Crimson Text', serif; font-size: 1.5rem;">Certifications & Training</h3>
+                        <ul style="list-style: none; color: var(--text-light);">
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                Certified Grief Counselor
+                            </li>
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                Licensed Life Coach
+                            </li>
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                Intuitive Healing Practitioner
+                            </li>
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                Arizona Cottage Food Certified
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 15px; font-family: 'Crimson Text', serif; font-size: 1.5rem;">Experience</h3>
+                        <ul style="list-style: none; color: var(--text-light);">
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                5+ years in grief counseling
+                            </li>
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                200+ individuals supported
+                            </li>
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                Community workshop facilitator
+                            </li>
+                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--healing-color);">✓</span>
+                                Cottage food entrepreneur
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3 style="font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-color);">Connect With Us</h3>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 15px;">Arizona, United States</p>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 15px;">CashApp: $yesitisshronda</p>
+                <a href="/contact.html" style="color: var(--accent-color); text-decoration: none;">Schedule a consultation</a>
+            </div>
+            
+            <div>
+                <h3 style="font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-color);">Our Services</h3>
+                <a href="/services.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin: 5px 0;">Healing & Coaching</a>
+                <a href="/abundant-harvest.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin: 5px 0;">Cottage Foods</a>
+                <a href="/services.html#plants" style="color: rgba(255, 255, 255, 0.8); text-decoration:
