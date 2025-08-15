@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional healing services, grief support, personal development coaching, plant care, and digital resources in Arizona. Empowering your journey of growth and renewal.">
+    <meta name="keywords" content="grief counseling Arizona, personal development coaching, healing services, plant therapy, spiritual guidance, life coaching">
+    <title>Services - Healing, Coaching & Plant Care | Shronda Jeanine & Company</title>
+    
+    <!-- Same CSS and structure as main page -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Include all the CSS from the main page */
+        :root {
+            --primary-color: #2c5530;
+            --secondary-color: #d4704a;
+            --accent-color: #f4a261;
+            --healing-color: #6a994e;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-primary: #fdfcfa;
+            --bg-secondary: #f7f5f3;
+            --card-bg: rgba(255, 253, 250, 0.95);
+            --shadow-soft: 0 4px 20px rgba(45, 55, 72, 0.08);
+            --shadow-lifted: 0 10px 40px rgba(45, 55, 72, 0.12);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        /* Navigation - Same as main page */
+        .navbar {
+            background: rgba(255, 253, 250, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(106, 153, 78, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--healing-color);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, rgba(106, 153, 78, 0.1), rgba(244, 162, 97, 0.05));
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border-left: 4px solid var(--healing-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--healing-color);
+            font-weight: bold;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-cta {
+            background: linear-gradient(135deg, var(--healing-color), var(--accent-color));
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .service-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .ad-banner {
+            background: rgba(106, 153, 78, 0.05);
+            border: 2px dashed rgba(106, 153, 78, 0.2);
+            padding: 20px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            color: var(--text-light);
+        }
+
+        /* Footer - Same as main */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .container {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Shronda Jeanine & Co</a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services.html" class="active">Services</a></li>
+                <li><a href="/abundant-harvest.html">Abundant Harvest</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1 class="page-title">Our Services</h1>
+        <p class="page-subtitle">Professional support for your journey of healing, growth, and abundant living</p>
+    </header>
+
+    <!-- AdSense Banner -->
+    <div class="ad-banner">
+        [AdSense Banner Ad - 728x90 or Responsive]
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="services-grid">
+            <!-- Grief Support & Healing -->
+            <article class="service-card">
+                <span class="service-icon">💚</span>
+                <h3>Grief Support & Healing</h3>
+                <p>Compassionate guidance through loss, helping you process grief and find your path to healing with professional support and understanding.</p>
+                <ul class="service-features">
+                    <li>One-on-one grief counseling sessions</li>
+                    <li>Group support circles</li>
+                    <li>Personalized healing plans</li>
+                    <li>Ongoing emotional support</li>
+                    <li>Spiritual guidance and comfort</li>
+                </ul>
+                <div class="service-price">Starting at $75/session</div>
+                <a href="/contact.html" class="service-cta">Schedule Consultation</a>
+            </article>
+
+            <!-- Personal Development Coaching -->
+            <article class="service-card">
+                <span class="service-icon">✨</span>
+                <h3>Personal Development Coaching</h3>
+                <p>Empower yourself to reclaim your power, discover your purpose, and create the life you desire with personalized coaching and accountability.</p>
+                <ul class="service-features">
+                    <li>Life purpose discovery sessions</li>
+                    <li>Goal setting and achievement planning</li>
+                    <li>Confidence and self-esteem building</li>
+                    <li>Career and life transition support</li>
+                    <li>Weekly accountability check-ins</li>
+                </ul>
+                <div class="service-price">$100/session or $350/month package</div>
+                <a href="/contact.html" class="service-cta">Start Your Journey</a>
+            </article>
+
+            <!-- Spiritual Guidance -->
+            <article class="service-card">
+                <span class="service-icon">🔮</span>
+                <h3>Spiritual Guidance & Intuitive Coaching</h3>
+                <p>Connect with your inner wisdom and spiritual path through intuitive guidance, meditation, and spiritual practices tailored to your unique journey.</p>
+                <ul class="service-features">
+                    <li>Intuitive guidance sessions</li>
+                    <li>Meditation and mindfulness training</li>
+                    <li>Spiritual practice development</li>
+                    <li>Energy clearing and alignment</li>
+                    <li>Sacred ritual creation</li>
+                </ul>
+                <div class="service-price">$85/session</div>
+                <a href="/contact.html" class="service-cta">Book Session</a>
+            </article>
+
+            <!-- Plant Care & Therapy -->
+            <article class="service-card" id="plants">
+                <span class="service-icon">🪴</span>
+                <h3>Plant Care & Green Therapy</h3>
+                <p>Bring healing energy into your space with carefully selected plants. Includes plant selection, care guidance, and the therapeutic benefits of plant parenting.</p>
+                <ul class="service-features">
+                    <li>Pothos, Snake Plants, Monstera varieties</li>
+                    <li>Personalized plant selection consultation</li>
+                    <li>Comprehensive care instructions</li>
+                    <li>Ongoing plant care support</li>
+                    <li>Plant therapy and healing benefits education</li>
+                </ul>
+                <div class="service-price">Plants from $25-$150 + consultation</div>
+                <a href="/contact.html" class="service-cta">Browse Plants</a>
+            </article>
+
+            <!-- Digital Resources -->
+            <article class="service-card" id="ebook">
+                <span class="service-icon">📚</span>
+                <h3>Digital Resources & Materials</h3>
+                <p>Access powerful digital tools for your healing journey, including eBooks, guided meditations, worksheets, and inspirational content.</p>
+                <ul class="service-features">
+                    <li>"Seeds of Light" 30-day inspiration eBook</li>
+                    <li>"Reclaiming My Power" healing guide</li>
+                    <li>Guided meditation audio series</li>
+                    <li>Journaling prompts and worksheets</li>
+                    <li>Monthly inspiration newsletters</li>
+                </ul>
+                <div class="service-price">eBooks from $15-$45</div>
+                <a href="/contact.html" class="service-cta">Download Resources</a>
+            </article>
+
+            <!-- Workshop & Group Sessions -->
+            <article class="service-card">
+                <span class="service-icon">👥</span>
+                <h3>Workshops & Group Sessions</h3>
+                <p>Join our community workshops and group sessions for shared healing, learning, and growth in a supportive environment.</p>
+                <ul class="service-features">
+                    <li>Monthly healing circles</li>
+                    <li>Grief support group meetings</li>
+                    <li>Personal development workshops</li>
+                    <li>Plant care and therapy sessions</li>
+                    <li>Spiritual practice gatherings</li>
+                </ul>
+                <div class="service-price">$35-$75 per workshop</div>
+                <a href="/contact.html" class="service-cta">Join Community</a>
+            </article>
+        </div>
+
+        <!-- AdSense Rectangle Ad -->
+        <div class="ad-banner">
+            [AdSense Rectangle Ad - 300x250]
+        </div>
+
+        <!-- Additional Services Section -->
+        <section style="margin-top: 80px; text-align: center;">
+            <h2 style="font-family: 'Crimson Text', serif; font-size: 2.5rem; color: var(--primary-color); margin-bottom: 40px;">Custom Services</h2>
+            <div style="background: var(--card-bg); padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow-soft); max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 30px;">
+                    Every healing journey is unique. We offer customized service packages tailored to your specific needs, timeline, and goals.
+                </p>
+                <ul style="list-style: none; margin: 30px 0; text-align: left; max-width: 600px; margin: 30px auto;">
+                    <li style="padding: 10px 0; padding-left: 25px; position: relative; color: var(--text-dark);">
+                        <span style="position: absolute; left: 0; color: var(--healing-color); font-weight: bold;">✓</span>
+                        Combination coaching and healing packages
+                    </li>
+                    <li style="padding: 10px 0; padding-left: 25px; position: relative; color: var(--text-dark);">
+                        <span style="position: absolute; left: 0; color: var(--healing-color); font-weight: bold;">✓</span>
+                        Extended support programs (3, 6, 12 months)
+                    </li>
+                    <li style="padding: 10px 0; padding-left: 25px; position: relative; color: var(--text-dark);">
+                        <span style="position: absolute; left: 0; color: var(--healing-color); font-weight: bold;">✓</span>
+                        Corporate wellness and team healing sessions
+                    </li>
+                    <li style="padding: 10px 0; padding-left: 25px; position: relative; color: var(--text-dark);">
+                        <span style="position: absolute; left: 0; color: var(--healing-color); font-weight: bold;">✓</span>
+                        Virtual and in-person session options
+                    </li>
+                </ul>
+                <a href="/contact.html" style="background: linear-gradient(135deg, var(--healing-color), var(--accent-color)); color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: var(--transition);">
+                    Discuss Custom Package
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 15px; color: var(--accent-color);">Shronda Jeanine & Co</h3>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7;">Professional healing services, personal development, and nourishing support for your journey.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 15px; color: var(--accent-color);">Quick Links</h3>
+                <a href="/" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin: 5px 0;">Home</a>
+                <a href="/services.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin: 5px 0;">Services</a>
+                <a href="/abundant-harvest.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin: 5px 0;">Abundant Harvest</a>
+                <a href="/contact.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; display: block; margin: 5px 0;">Contact</a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.6);">
+            <p>&copy; 2025 Shronda Jeanine & Company. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
